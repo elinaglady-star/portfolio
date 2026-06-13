@@ -4,6 +4,15 @@ import math
 import subprocess
 import os
 
+if not hasattr(ft, "colors") and hasattr(ft, "Colors"):
+    ft.colors = ft.Colors
+if not hasattr(ft, "ImageFit") and hasattr(ft, "BoxFit"):
+    ft.ImageFit = ft.BoxFit
+if hasattr(ft, "Icons") and (
+    not hasattr(ft, "icons") or not hasattr(ft.icons, "BADGE")
+):
+    ft.icons = ft.Icons
+
 # ── SHARED CONSTANTS ──────────────────────────────────────────────────────────
 ACCENT_COLOR   = "#F72578"
 DIVIDER_COLOR  = "#C75886"
