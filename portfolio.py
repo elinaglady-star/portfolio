@@ -170,13 +170,13 @@ def build_top_nav(page: ft.Page, active_key: str):
                 ),
                 ft.Row(
                     controls=[
-                        nav_button("Home",       ft.Icons.HOME,        "/home"),
-                        nav_button("Timeline",   ft.Icons.TIMELINE,    "/timeline"),
-                        nav_button("GitHub",     ft.Icons.CODE,        "/github"),
-                        nav_button("MATLAB Hub", ft.Icons.SCHOOL,      "/matlab"),
-                        nav_button("Demos",      ft.Icons.PLAY_CIRCLE, "/demos"),
-                        nav_button("Blog",       ft.Icons.ARTICLE,     "/blog"),
-                        nav_button("Contact",    ft.Icons.MAIL,        "/contact"),
+                        nav_button("Home",       ft.icons.HOME,        "/home"),
+                        nav_button("Timeline",   ft.icons.TIMELINE,    "/timeline"),
+                        nav_button("GitHub",     ft.icons.CODE,        "/github"),
+                        nav_button("MATLAB Hub", ft.icons.SCHOOL,      "/matlab"),
+                        nav_button("Demos",      ft.icons.PLAY_CIRCLE, "/demos"),
+                        nav_button("Blog",       ft.icons.ARTICLE,     "/blog"),
+                        nav_button("Contact",    ft.icons.MAIL,        "/contact"),
                     ],
                     spacing=4,
                     alignment=ft.MainAxisAlignment.END,
@@ -346,17 +346,17 @@ def home_body():
                         ]),
                         ft.Column(spacing=5, controls=[
                             ft.Row([
-                                ft.Icon(ft.Icons.BADGE, color=IC_BADGE, size=16),
+                                ft.Icon(ft.icons.BADGE, color=IC_BADGE, size=16),
                                 ft.Text("Student Number: 225150522",
                                         size=14, color=SUBTLE_COLOR),
                             ]),
                             ft.Row([
-                                ft.Icon(ft.Icons.BOOK_ROUNDED, color=IC_BOOK, size=16),
+                                ft.Icon(ft.icons.BOOK_ROUNDED, color=IC_BOOK, size=16),
                                 ft.Text("Module: Computer Programming I",
                                         size=14, color=SUBTLE_COLOR),
                             ]),
                             ft.Row([
-                                ft.Icon(ft.Icons.GROUPS_3, color=IC_GROUPS, size=16),
+                                ft.Icon(ft.icons.GROUPS_3, color=IC_GROUPS, size=16),
                                 ft.Text("Assigned Team: Group 15 (MechTek)",
                                         size=14, color=SUBTLE_COLOR),
                             ]),
@@ -398,10 +398,10 @@ def home_body():
                     weight=ft.FontWeight.W_600),
             ft.Container(height=6),
             ft.Row(wrap=True, spacing=10, run_spacing=10, controls=[
-                skill_chip("Python",      ft.Icons.CODE,            "#5BC8F5"),
-                skill_chip("JavaScript",  ft.Icons.JAVASCRIPT,      "#FACC15"),
-                skill_chip("JSX / React", ft.Icons.WIDGETS,         "#A78BFA"),
-                skill_chip("MATLAB",      ft.Icons.CALCULATE,       "#4ADE80"),
+                skill_chip("Python",      ft.icons.CODE,            "#5BC8F5"),
+                skill_chip("JavaScript",  ft.icons.JAVASCRIPT,      "#FACC15"),
+                skill_chip("JSX / React", ft.icons.WIDGETS,         "#A78BFA"),
+                skill_chip("MATLAB",      ft.icons.CALCULATE,       "#4ADE80"),
             ]),
             ft.Container(height=16),
 
@@ -410,12 +410,12 @@ def home_body():
                     weight=ft.FontWeight.W_600),
             ft.Container(height=6),
             ft.Row(wrap=True, spacing=10, run_spacing=10, controls=[
-                skill_chip("Flet",          ft.Icons.DESKTOP_WINDOWS, "#5BC8F5"),
-                skill_chip("React Native",  ft.Icons.PHONE_ANDROID,   "#F472B6"),
-                skill_chip("Expo",          ft.Icons.ROCKET_LAUNCH,   "#FB923C"),
-                skill_chip("Firebase",      ft.Icons.LOCAL_FIRE_DEPARTMENT, "#FACC15"),
-                skill_chip("AsyncStorage",  ft.Icons.CLOUD_SYNC,      "#34D399"),
-                skill_chip("Git & GitHub",  ft.Icons.MERGE_TYPE,      "#F87171"),
+                skill_chip("Flet",          ft.icons.DESKTOP_WINDOWS, "#5BC8F5"),
+                skill_chip("React Native",  ft.icons.PHONE_ANDROID,   "#F472B6"),
+                skill_chip("Expo",          ft.icons.ROCKET_LAUNCH,   "#FB923C"),
+                skill_chip("Firebase",      ft.icons.LOCAL_FIRE_DEPARTMENT, "#FACC15"),
+                skill_chip("AsyncStorage",  ft.icons.CLOUD_SYNC,      "#34D399"),
+                skill_chip("Git & GitHub",  ft.icons.MERGE_TYPE,      "#F87171"),
             ]),
             ft.Container(height=16),
 
@@ -424,11 +424,11 @@ def home_body():
                     weight=ft.FontWeight.W_600),
             ft.Container(height=6),
             ft.Row(wrap=True, spacing=10, run_spacing=10, controls=[
-                skill_chip("Civil Engineering",        ft.Icons.DOMAIN,          "#A78BFA"),
-                skill_chip("Asset Fault Tracking",     ft.Icons.BUILD_CIRCLE,    "#4ADE80"),
-                skill_chip("NoSQL / Firestore",        ft.Icons.STORAGE,         "#5BC8F5"),
-                skill_chip("System Architecture",      ft.Icons.ACCOUNT_TREE,    "#FB923C"),
-                skill_chip("Cross-Platform Dev",       ft.Icons.DEVICES,         "#F472B6"),
+                skill_chip("Civil Engineering",        ft.icons.DOMAIN,          "#A78BFA"),
+                skill_chip("Asset Fault Tracking",     ft.icons.BUILD_CIRCLE,    "#4ADE80"),
+                skill_chip("NoSQL / Firestore",        ft.icons.STORAGE,         "#5BC8F5"),
+                skill_chip("System Architecture",      ft.icons.ACCOUNT_TREE,    "#FB923C"),
+                skill_chip("Cross-Platform Dev",       ft.icons.DEVICES,         "#F472B6"),
             ]),
 
             ft.Container(height=30),
@@ -438,10 +438,10 @@ def home_body():
             ft.Container(height=10),
             ft.ResponsiveRow(
                 controls=[
-                    _stat_card("8",   "MATLAB Courses",   ft.Icons.SCHOOL,           "#4ADE80"),
-                    _stat_card("15%", "CA Weighting",     ft.Icons.GRADE,            "#FACC15"),
-                    _stat_card("16",  "Team Members",     ft.Icons.GROUPS_3,         "#F472B6"),
-                    _stat_card("5",   "Sprint Phases",    ft.Icons.TIMELINE,         "#5BC8F5"),
+                    _stat_card("8",   "MATLAB Courses",   ft.icons.SCHOOL,           "#4ADE80"),
+                    _stat_card("15%", "CA Weighting",     ft.icons.GRADE,            "#FACC15"),
+                    _stat_card("16",  "Team Members",     ft.icons.GROUPS_3,         "#F472B6"),
+                    _stat_card("5",   "Sprint Phases",    ft.icons.TIMELINE,         "#5BC8F5"),
                 ],
                 spacing=15, run_spacing=15,
             ),
@@ -505,23 +505,23 @@ def timeline_body():
         ("Weeks 1–2: Initiation & Architecture",
          "Conducted initial design meetings to finalize the SRS technical contracts, "
          "role-based access flows, and data boundaries.",
-         ft.Icons.ASSIGNMENT_TURNED_IN, "#5BC8F5", "SRS ARCHITECTURE"),
+         ft.icons.ASSIGNMENT_TURNED_IN, "#5BC8F5", "SRS ARCHITECTURE"),
         ("Weeks 3–5: UI/UX & Frontend Scaffolding",
          "Collaborated with design leads to engineer modular components, form handling "
          "states, and responsive view containers matching mobile dimensions.",
-         ft.Icons.DASHBOARD_CUSTOMIZE, "#A78BFA", "UI COMPONENTS"),
+         ft.icons.DASHBOARD_CUSTOMIZE, "#A78BFA", "UI COMPONENTS"),
         ("Weeks 6–8: Core Route & Navigation Engineering",
          "Constructed state routing arrays, layout switching flows, and contextual "
          "tracking views for workers, technicians, and supervisors.",
-         ft.Icons.ALT_ROUTE, "#4ADE80", "ROUTING MATRIX"),
+         ft.icons.ALT_ROUTE, "#4ADE80", "ROUTING MATRIX"),
         ("Weeks 9–10: Optimization & Offline Queue Strategy",
          "Configured system performance parameters, component rendering optimizations, "
          "and AsyncStorage local data fallback setups.",
-         ft.Icons.CLOUD_SYNC, "#FB923C", "ASYNC STORAGE"),
+         ft.icons.CLOUD_SYNC, "#FB923C", "ASYNC STORAGE"),
         ("Weeks 11–12+: Deployment & Quality Assurance",
          "Assisted with end-to-end connectivity verification, Firestore document rule "
          "testing, and production behavior QA against SRS system benchmarks.",
-         ft.Icons.VERIFIED, "#F472B6", "PRODUCTION QA"),
+         ft.icons.VERIFIED, "#F472B6", "PRODUCTION QA"),
     ]
 
     cards = [
@@ -642,7 +642,7 @@ def github_body():
         ft.Container(
             content=ft.ElevatedButton(
                 "View Production Repository on GitHub",
-                icon=ft.Icons.CODE,
+                icon=ft.icons.CODE,
                 style=ft.ButtonStyle(
                     color=BG_COLOR, bgcolor=ACCENT_COLOR,
                     padding=20,
@@ -659,7 +659,7 @@ def github_body():
             ft.Container(
                 content=ft.Column(controls=[
                     ft.ListTile(
-                        leading=ft.Icon(ft.Icons.CALL_MERGE, color="green"),
+                        leading=ft.Icon(ft.icons.CALL_MERGE, color="green"),
                         title=ft.Text("PR #12: Local Async Storage Layer",
                                       color=TEXT_COLOR,
                                       weight=ft.FontWeight.BOLD),
@@ -680,7 +680,7 @@ def github_body():
             ft.Container(
                 content=ft.Column(controls=[
                     ft.ListTile(
-                        leading=ft.Icon(ft.Icons.RATE_REVIEW, color="amber"),
+                        leading=ft.Icon(ft.icons.RATE_REVIEW, color="amber"),
                         title=ft.Text("Feature: Report Fault Screen Layout",
                                       color=TEXT_COLOR,
                                       weight=ft.FontWeight.BOLD),
@@ -703,7 +703,7 @@ def github_body():
         ft.Container(
             content=ft.Column(controls=[
                 ft.ListTile(
-                    leading=ft.Icon(ft.Icons.HISTORY, color="blue"),
+                    leading=ft.Icon(ft.icons.HISTORY, color="blue"),
                     title=ft.Text("Development Commit History Screenshots",
                                   color=TEXT_COLOR, weight=ft.FontWeight.BOLD),
                     subtitle=ft.Text(
@@ -849,7 +849,7 @@ def demos_body():
                                 ft.ElevatedButton(
                                     content=ft.Row(
                                         [
-                                            ft.Icon(ft.Icons.PLAY_ARROW_ROUNDED, color=BG_COLOR),
+                                            ft.Icon(ft.icons.PLAY_ARROW_ROUNDED, color=BG_COLOR),
                                             ft.Text("Click here to Watch my project contribution video", color=BG_COLOR, weight="bold"),
                                         ],
                                         spacing=8,
@@ -868,7 +868,7 @@ def demos_body():
                             spacing=8,
                         ),
                         ft.Container(
-                            content=ft.Icon(ft.Icons.PLAY_CIRCLE_FILLED_ROUNDED, size=80, color=ACCENT_COLOR),
+                            content=ft.Icon(ft.icons.PLAY_CIRCLE_FILLED_ROUNDED, size=80, color=ACCENT_COLOR),
                             alignment=ft.Alignment(0.0, 0.0),
                             expand=True,
                         ),
@@ -1113,21 +1113,21 @@ def contact_body(page: ft.Page):
                             ft.Container(height=15),
                             ft.Column([
                                 ft.Row([
-                                    ft.Icon(ft.Icons.EMAIL, color=IC_EMAIL, size=18),
+                                    ft.Icon(ft.icons.EMAIL, color=IC_EMAIL, size=18),
                                     ft.Text("Email: ", weight=ft.FontWeight.BOLD,
                                             color=TEXT_COLOR, size=15),
                                     ft.Text("elinaglady@gmail.com",
                                             color=SUBTLE_COLOR, size=15),
                                 ], spacing=5),
                                 ft.Row([
-                                    ft.Icon(ft.Icons.PHONE, color=IC_PHONE, size=18),
+                                    ft.Icon(ft.icons.PHONE, color=IC_PHONE, size=18),
                                     ft.Text("Cell: ", weight=ft.FontWeight.BOLD,
                                             color=TEXT_COLOR, size=15),
                                     ft.Text("+264 81 4823549",
                                             color=SUBTLE_COLOR, size=15),
                                 ], spacing=5),
                                 ft.Row([
-                                    ft.Icon(ft.Icons.CAMERA_ALT, color=IC_INSTA, size=18),
+                                    ft.Icon(ft.icons.CAMERA_ALT, color=IC_INSTA, size=18),
                                     ft.Text("Instagram: ", weight=ft.FontWeight.BOLD,
                                             color=TEXT_COLOR, size=15),
                                     ft.Text("_glady.s_",
