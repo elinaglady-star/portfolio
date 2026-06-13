@@ -2,6 +2,7 @@ import flet as ft
 import flet.canvas as cv
 import math
 import subprocess
+import os
 
 # ── SHARED CONSTANTS ──────────────────────────────────────────────────────────
 ACCENT_COLOR   = "#F72578"
@@ -1215,4 +1216,4 @@ def main(page: ft.Page):
     page.go("/home")
 
 
-ft.app(target=main)
+ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=int(os.environ.get("PORT", 8080)))
