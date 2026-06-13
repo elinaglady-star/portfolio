@@ -14,7 +14,7 @@ IC_EMAIL       = "#E23674"
 IC_PHONE       = "#B73B74"
 IC_INSTA       = "#F72578"
 TEXT_COLOR     = "#4A1730"
-SUBTLE_COLOR   = ft.Colors.with_opacity(0.78, TEXT_COLOR)
+SUBTLE_COLOR = ft.colors.with_opacity(0.78, TEXT_COLOR)
 BG_COLOR       = "#F9DCE6"
 
 HEADER_SIZE    = 28
@@ -29,7 +29,7 @@ def _build_background_shapes():
         shapes.append(cv.Circle(
             x=x, y=y, radius=radius,
             paint=ft.Paint(
-                color=ft.Colors.with_opacity(opacity, color),
+                color=ft.colors.with_opacity(opacity, color),
                 style=ft.PaintingStyle.FILL,
             ),
         ))
@@ -52,7 +52,7 @@ def _build_background_shapes():
             circle(1710, y + offset, 110, "#FF5FAE", 0.28)
 
     wave_paint = ft.Paint(
-        color=ft.Colors.with_opacity(0.72, "#FFFFFF"),
+        color=ft.colors.with_opacity(0.72, "#FFFFFF"),
         stroke_width=2.2,
         style=ft.PaintingStyle.STROKE,
     )
@@ -71,7 +71,7 @@ def _build_background_shapes():
                     ))
                 previous = (x, y)
 
-    dot_paint = ft.Paint(color=ft.Colors.with_opacity(0.76, ACCENT_COLOR))
+    dot_paint = ft.Paint(color=ft.colors.with_opacity(0.76, ACCENT_COLOR))
     for x_start, y_start, scale in ((62, 980, 8), (1520, 910, 8), (1785, 980, 8)):
         for row in range(8):
             for col in range(8 - row // 2):
@@ -83,7 +83,7 @@ def _build_background_shapes():
                 ))
 
     cross_paint = ft.Paint(
-        color=ft.Colors.with_opacity(0.80, ACCENT_COLOR),
+        color=ft.colors.with_opacity(0.80, ACCENT_COLOR),
         stroke_width=3,
         style=ft.PaintingStyle.STROKE,
     )
@@ -129,18 +129,18 @@ def build_top_nav(page: ft.Page, active_key: str):
             on_click=go(route),
             style=ft.ButtonStyle(
                 padding=ft.Padding(10, 6, 10, 6),
-                bgcolor=ft.Colors.with_opacity(0.12, ACCENT_COLOR) if is_active
-                        else ft.Colors.TRANSPARENT,
-                overlay_color=ft.Colors.with_opacity(0.08, ACCENT_COLOR),
+                bgcolor=ft.colors.with_opacity(0.12, ACCENT_COLOR) if is_active
+                        else ft.colors.TRANSPARENT,
+                overlay_color=ft.colors.with_opacity(0.08, ACCENT_COLOR),
             ),
         )
 
     return ft.Container(
-        bgcolor=ft.Colors.with_opacity(0.95, BG_COLOR),
+        bgcolor=ft.colors.with_opacity(0.95, BG_COLOR),
         # ── taller navbar ──
         padding=ft.Padding(20, 14, 20, 14),
         border=ft.border.Border(
-            bottom=ft.border.BorderSide(1, ft.Colors.with_opacity(0.15, TEXT_COLOR))
+            bottom=ft.border.BorderSide(1, ft.colors.with_opacity(0.15, TEXT_COLOR))
         ),
         content=ft.Row(
             controls=[
@@ -166,7 +166,7 @@ def build_top_nav(page: ft.Page, active_key: str):
                         ], spacing=1, tight=True),
                     ], spacing=10, tight=True),
                     on_click=go("/home"),
-                    style=ft.ButtonStyle(overlay_color=ft.Colors.TRANSPARENT),
+                    style=ft.ButtonStyle(overlay_color=ft.colors.TRANSPARENT),
                 ),
                 ft.Row(
                     controls=[
@@ -243,13 +243,13 @@ def math_module_card(title, description, top_formula,
                     alignment=ft.MainAxisAlignment.CENTER,
                 ),
                 padding=12,
-                bgcolor=ft.Colors.with_opacity(0.15, BG_COLOR),
-                border=ft.border.all(1, ft.Colors.with_opacity(0.10, TEXT_COLOR)),
+                bgcolor=ft.colors.with_opacity(0.15, BG_COLOR),
+                border=ft.border.all(1, ft.colors.with_opacity(0.10, TEXT_COLOR)),
                 border_radius=6,
             ),
         ], spacing=10),
         padding=20,
-        border=ft.border.all(1, ft.Colors.with_opacity(0.12, TEXT_COLOR)),
+        border=ft.border.all(1, ft.colors.with_opacity(0.12, TEXT_COLOR)),
         border_radius=10,
         col={"sm": 12, "md": 6, "lg": 4},
     )
@@ -266,7 +266,7 @@ def blog_post_preview(title, description):
         ], spacing=5),
         margin=ft.Margin(bottom=20),
         padding=15,
-        border=ft.border.all(1, ft.Colors.with_opacity(0.12, TEXT_COLOR)),
+        border=ft.border.all(1, ft.colors.with_opacity(0.12, TEXT_COLOR)),
         border_radius=10,
     )
 
@@ -278,7 +278,7 @@ def cert_card(img_path):
         bgcolor="#FFFFFF",
         border_radius=15,
         shadow=ft.BoxShadow(blur_radius=10,
-                            color=ft.Colors.with_opacity(0.26, ft.Colors.BLACK)),
+                            color=ft.colors.with_opacity(0.26, ft.colors.BLACK)),
         col={"sm": 12, "md": 6},
     )
 
@@ -291,9 +291,9 @@ def skill_chip(label, icon, color):
                     weight=ft.FontWeight.W_500),
         ], spacing=6, tight=True),
         padding=ft.Padding(12, 8, 12, 8),
-        border=ft.border.all(1, ft.Colors.with_opacity(0.25, color)),
+        border=ft.border.all(1, ft.colors.with_opacity(0.25, color)),
         border_radius=20,
-        bgcolor=ft.Colors.with_opacity(0.08, color),
+        bgcolor=ft.colors.with_opacity(0.08, color),
     )
 
 
@@ -310,7 +310,7 @@ def home_body():
                 content=ft.Container(
                     width=280, height=340,
                     border_radius=20,
-                    border=ft.border.all(1, ft.Colors.with_opacity(0.3, ACCENT_COLOR)),
+                    border=ft.border.all(1, ft.colors.with_opacity(0.3, ACCENT_COLOR)),
                     padding=10,
                     content=ft.Image(src="Gladys.jpeg", fit=ft.BoxFit.COVER,
                                      border_radius=14),
@@ -447,9 +447,9 @@ def home_body():
             ),
         ]),
         padding=ft.Padding(30, 28, 30, 28),
-        border=ft.border.all(1, ft.Colors.with_opacity(0.12, TEXT_COLOR)),
+        border=ft.border.all(1, ft.colors.with_opacity(0.12, TEXT_COLOR)),
         border_radius=14,
-        bgcolor=ft.Colors.with_opacity(0.06, TEXT_COLOR),
+        bgcolor=ft.colors.with_opacity(0.06, TEXT_COLOR),
     )
 
     return ft.Column(
@@ -493,9 +493,9 @@ def _stat_card(value, label, icon, color):
             spacing=4,
         ),
         padding=20,
-        border=ft.border.all(1, ft.Colors.with_opacity(0.15, color)),
+        border=ft.border.all(1, ft.colors.with_opacity(0.15, color)),
         border_radius=12,
-        bgcolor=ft.Colors.with_opacity(0.07, color),
+        bgcolor=ft.colors.with_opacity(0.07, color),
     )
 
 
@@ -528,9 +528,9 @@ def timeline_body():
         ft.Container(
             padding=20,
             margin=ft.Margin(bottom=15, top=0, left=0, right=0),
-            border=ft.border.all(1, ft.Colors.with_opacity(0.15, TEXT_COLOR)),
+            border=ft.border.all(1, ft.colors.with_opacity(0.15, TEXT_COLOR)),
             border_radius=12,
-            bgcolor=ft.Colors.with_opacity(0.08, TEXT_COLOR),
+            bgcolor=ft.colors.with_opacity(0.08, TEXT_COLOR),
             content=ft.Row(
                 alignment=ft.MainAxisAlignment.START,
                 vertical_alignment=ft.CrossAxisAlignment.START,
@@ -549,7 +549,7 @@ def timeline_body():
                                     content=ft.Text(badge_text, size=11,
                                                     color=BG_COLOR,
                                                     weight=ft.FontWeight.W_600),
-                                    bgcolor=ft.Colors.with_opacity(0.80, ACCENT_COLOR),
+                                    bgcolor=ft.colors.with_opacity(0.80, ACCENT_COLOR),
                                     padding=10, border_radius=15,
                                 ),
                             ],
@@ -631,12 +631,12 @@ def github_body():
                 ),
             ]),
             padding=20,
-            bgcolor=ft.Colors.with_opacity(0.10, TEXT_COLOR),
+            bgcolor=ft.colors.with_opacity(0.10, TEXT_COLOR),
             border_radius=10,
             margin=ft.Margin(bottom=20),
         ),
         ft.Divider(height=10, thickness=1,
-                   color=ft.Colors.with_opacity(0.12, TEXT_COLOR)),
+                   color=ft.colors.with_opacity(0.12, TEXT_COLOR)),
         ft.Text("Project Repository", size=SUBHEADER_SIZE,
                 weight=ft.FontWeight.BOLD, color=TEXT_COLOR),
         ft.Container(
@@ -674,7 +674,7 @@ def github_body():
                     ),
                 ], spacing=0),
                 col={"sm": 12, "md": 6},
-                bgcolor=ft.Colors.with_opacity(0.10, TEXT_COLOR),
+                bgcolor=ft.colors.with_opacity(0.10, TEXT_COLOR),
                 border_radius=8,
             ),
             ft.Container(
@@ -695,7 +695,7 @@ def github_body():
                     ),
                 ], spacing=0),
                 col={"sm": 12, "md": 6},
-                bgcolor=ft.Colors.with_opacity(0.10, TEXT_COLOR),
+                bgcolor=ft.colors.with_opacity(0.10, TEXT_COLOR),
                 border_radius=8,
             ),
         ], spacing=15),
@@ -716,7 +716,7 @@ def github_body():
                     padding=ft.Padding(left=16, right=16, bottom=16),
                 ),
             ], spacing=0),
-            bgcolor=ft.Colors.with_opacity(0.10, TEXT_COLOR),
+            bgcolor=ft.colors.with_opacity(0.10, TEXT_COLOR),
             border_radius=8,
         ),
         ft.Divider(color=DIVIDER_COLOR, height=60),
@@ -816,7 +816,7 @@ def demos_body():
                             weight=ft.FontWeight.W_800, color=TEXT_COLOR,
                             style=ft.TextStyle(letter_spacing=0.5)),
                     # Changed color to a lighter, readable golden-tinted white
-                    ft.Text("Interactive media updates and core logic validations.", size=14, color=ft.Colors.with_opacity(0.7, TEXT_COLOR)),
+                    ft.Text("Interactive media updates and core logic validations.", size=14, color=ft.colors.with_opacity(0.7, TEXT_COLOR)),
                 ],
                 spacing=4,
             ),
@@ -829,7 +829,7 @@ def demos_body():
                     colors=["#FFD7E4", "#F72578"],
                 ),
                 # Replaced harsh white border with a very subtle bronze-gold border that matches the theme
-                border=ft.border.all(1, ft.Colors.with_opacity(0.12, ACCENT_COLOR)),
+                border=ft.border.all(1, ft.colors.with_opacity(0.12, ACCENT_COLOR)),
                 border_radius=16,
                 padding=24,
                 content=ft.Row(
@@ -838,13 +838,13 @@ def demos_body():
                             [
                                 ft.Container(
                                     content=ft.Text("VIDEO RESOURCE", size=10, weight="bold", color=ACCENT_COLOR),
-                                    bgcolor=ft.Colors.with_opacity(0.1, ACCENT_COLOR),
+                                    bgcolor=ft.colors.with_opacity(0.1, ACCENT_COLOR),
                                     padding=ft.Padding.symmetric(horizontal=10, vertical=4),
                                     border_radius=20,
                                 ),
                                 ft.Text("Play MechTek Demo Video", color=TEXT_COLOR, size=20, weight="bold"),
                                 # Changed color to a crisp, readable opaque tone instead of the dark blue-gray
-                                ft.Text("Review system data processing architecture pipelines live.", color=ft.Colors.with_opacity(0.6, TEXT_COLOR), size=13),
+                                ft.Text("Review system data processing architecture pipelines live.", color=ft.colors.with_opacity(0.6, TEXT_COLOR), size=13),
                                 ft.Container(expand=True),
                                 ft.ElevatedButton(
                                     content=ft.Row(
@@ -877,7 +877,7 @@ def demos_body():
             ),
             ft.Container(
                 padding=ft.Padding.symmetric(vertical=10),
-                content=ft.Divider(height=1, color=ft.Colors.with_opacity(0.08, TEXT_COLOR))
+                content=ft.Divider(height=1, color=ft.colors.with_opacity(0.08, TEXT_COLOR))
             ),
             ft.Text("Confidence in Concepts: System Mathematics",
                     size=SUBHEADER_SIZE, weight=ft.FontWeight.W_700, color=TEXT_COLOR),
@@ -1139,9 +1139,9 @@ def contact_body(page: ft.Page):
                     ft.Container(
                         col={"sm": 12, "md": 5},
                         padding=30,
-                        bgcolor=ft.Colors.with_opacity(0.12, ACCENT_COLOR),
+                        bgcolor=ft.colors.with_opacity(0.12, ACCENT_COLOR),
                         border=ft.border.all(
-                            1, ft.Colors.with_opacity(0.12, TEXT_COLOR)),
+                            1, ft.colors.with_opacity(0.12, TEXT_COLOR)),
                         border_radius=20,
                         content=ft.Column(
                             spacing=15,
