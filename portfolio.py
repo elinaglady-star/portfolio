@@ -244,12 +244,12 @@ def math_module_card(title, description, top_formula,
                 ),
                 padding=12,
                 bgcolor=ft.Colors.with_opacity(0.15, BG_COLOR),
-                border=ft.Border.all(1, ft.Colors.with_opacity(0.10, TEXT_COLOR)),
+                border=ft.border.all(1, ft.Colors.with_opacity(0.10, TEXT_COLOR)),
                 border_radius=6,
             ),
         ], spacing=10),
         padding=20,
-        border=ft.Border.all(1, ft.Colors.with_opacity(0.12, TEXT_COLOR)),
+        border=ft.border.all(1, ft.Colors.with_opacity(0.12, TEXT_COLOR)),
         border_radius=10,
         col={"sm": 12, "md": 6, "lg": 4},
     )
@@ -266,7 +266,7 @@ def blog_post_preview(title, description):
         ], spacing=5),
         margin=ft.Margin(bottom=20),
         padding=15,
-        border=ft.Border.all(1, ft.Colors.with_opacity(0.12, TEXT_COLOR)),
+        border=ft.border.all(1, ft.Colors.with_opacity(0.12, TEXT_COLOR)),
         border_radius=10,
     )
 
@@ -291,7 +291,7 @@ def skill_chip(label, icon, color):
                     weight=ft.FontWeight.W_500),
         ], spacing=6, tight=True),
         padding=ft.Padding(12, 8, 12, 8),
-        border=ft.Border.all(1, ft.Colors.with_opacity(0.25, color)),
+        border=ft.border.all(1, ft.Colors.with_opacity(0.25, color)),
         border_radius=20,
         bgcolor=ft.Colors.with_opacity(0.08, color),
     )
@@ -310,7 +310,7 @@ def home_body():
                 content=ft.Container(
                     width=280, height=340,
                     border_radius=20,
-                    border=ft.Border.all(1, ft.Colors.with_opacity(0.3, ACCENT_COLOR)),
+                    border=ft.border.all(1, ft.Colors.with_opacity(0.3, ACCENT_COLOR)),
                     padding=10,
                     content=ft.Image(src="Gladys.jpeg", fit=ft.BoxFit.COVER,
                                      border_radius=14),
@@ -447,7 +447,7 @@ def home_body():
             ),
         ]),
         padding=ft.Padding(30, 28, 30, 28),
-        border=ft.Border.all(1, ft.Colors.with_opacity(0.12, TEXT_COLOR)),
+        border=ft.border.all(1, ft.Colors.with_opacity(0.12, TEXT_COLOR)),
         border_radius=14,
         bgcolor=ft.Colors.with_opacity(0.06, TEXT_COLOR),
     )
@@ -493,7 +493,7 @@ def _stat_card(value, label, icon, color):
             spacing=4,
         ),
         padding=20,
-        border=ft.Border.all(1, ft.Colors.with_opacity(0.15, color)),
+        border=ft.border.all(1, ft.Colors.with_opacity(0.15, color)),
         border_radius=12,
         bgcolor=ft.Colors.with_opacity(0.07, color),
     )
@@ -528,7 +528,7 @@ def timeline_body():
         ft.Container(
             padding=20,
             margin=ft.Margin(bottom=15, top=0, left=0, right=0),
-            border=ft.Border.all(1, ft.Colors.with_opacity(0.15, TEXT_COLOR)),
+            border=ft.border.all(1, ft.Colors.with_opacity(0.15, TEXT_COLOR)),
             border_radius=12,
             bgcolor=ft.Colors.with_opacity(0.08, TEXT_COLOR),
             content=ft.Row(
@@ -829,7 +829,7 @@ def demos_body():
                     colors=["#FFD7E4", "#F72578"],
                 ),
                 # Replaced harsh white border with a very subtle bronze-gold border that matches the theme
-                border=ft.Border.all(1, ft.Colors.with_opacity(0.12, ACCENT_COLOR)),
+                border=ft.border.all(1, ft.Colors.with_opacity(0.12, ACCENT_COLOR)),
                 border_radius=16,
                 padding=24,
                 content=ft.Row(
@@ -1140,7 +1140,7 @@ def contact_body(page: ft.Page):
                         col={"sm": 12, "md": 5},
                         padding=30,
                         bgcolor=ft.Colors.with_opacity(0.12, ACCENT_COLOR),
-                        border=ft.Border.all(
+                        border=ft.border.all(
                             1, ft.Colors.with_opacity(0.12, TEXT_COLOR)),
                         border_radius=20,
                         content=ft.Column(
