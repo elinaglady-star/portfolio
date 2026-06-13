@@ -150,7 +150,7 @@ def build_top_nav(page: ft.Page, active_key: str):
                         ft.Image(
                             src="unam_logo.png",
                             width=70, height=70,
-                            fit=ft.boxfit.CONTAIN,
+                            fit=ft.BoxFit.CONTAIN,
                             error_content=ft.Text(
                                 "UNAM", size=22,
                                 weight=ft.FontWeight.BOLD,
@@ -273,7 +273,7 @@ def blog_post_preview(title, description):
 
 def cert_card(img_path):
     return ft.Container(
-        content=ft.Image(src=img_path, border_radius=10, fit=ft.boxfit.COVER),
+        content=ft.Image(src=img_path, border_radius=10, fit=ft.BoxFit.COVER),
         padding=10,
         bgcolor="#FFFFFF",
         border_radius=15,
@@ -312,7 +312,7 @@ def home_body():
                     border_radius=20,
                     border=ft.border.all(1, ft.colors.with_opacity(0.3, ACCENT_COLOR)),
                     padding=10,
-                    content=ft.Image(src="Gladys.jpeg", fit=ft.boxfit.COVER,
+                    content=ft.Image(src="Gladys.jpeg", fit=ft.BoxFit.COVER,
                                      border_radius=14),
                 ),
             ),
@@ -669,7 +669,7 @@ def github_body():
                     ),
                     ft.Container(
                         content=ft.Image(src="github_contr.png",
-                                         border_radius=4, fit=ft.boxfit.COVER),
+                                         border_radius=4, fit=ft.BoxFit.COVER),
                         padding=ft.Padding(left=16, right=16, bottom=16),
                     ),
                 ], spacing=0),
@@ -690,7 +690,7 @@ def github_body():
                     ),
                     ft.Container(
                         content=ft.Image(src="portfolio.png", height=200,
-                                         border_radius=4, fit=ft.boxfit.COVER),
+                                         border_radius=4, fit=ft.BoxFit.COVER),
                         padding=ft.Padding(left=16, right=16, bottom=16),
                     ),
                 ], spacing=0),
@@ -712,7 +712,7 @@ def github_body():
                 ),
                 ft.Container(
                     content=ft.Image(src="history.png",
-                                     border_radius=4, fit=ft.boxfit.COVER),
+                                     border_radius=4, fit=ft.BoxFit.COVER),
                     padding=ft.Padding(left=16, right=16, bottom=16),
                 ),
             ], spacing=0),
