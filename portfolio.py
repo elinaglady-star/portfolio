@@ -650,7 +650,7 @@ def github_body():
                 ),
                 url="https://github.com/224032909/MechTek.git",
             ),
-            padding=ft.Padding(left=40, right=40),
+            padding=ft.Padding(left=40, right=40, top=0, bottom=0),
         ),
         ft.Container(height=20),
         ft.Text("Verifiable Pull Request & Code Review Logs",
@@ -670,7 +670,7 @@ def github_body():
                     ft.Container(
                         content=ft.Image(src="github_contr.png",
                                          border_radius=4, fit=ft.ImageFit.COVER),
-                        padding=ft.Padding(left=16, right=16, bottom=16),
+                        padding=ft.Padding(left=16, right=16, top=0, bottom=16),
                     ),
                 ], spacing=0),
                 col={"sm": 12, "md": 6},
@@ -691,7 +691,7 @@ def github_body():
                     ft.Container(
                         content=ft.Image(src="portfolio.png", height=200,
                                          border_radius=4, fit=ft.ImageFit.COVER),
-                        padding=ft.Padding(left=16, right=16, bottom=16),
+                        padding=ft.Padding(left=16, right=16, top=0, bottom=16),
                     ),
                 ], spacing=0),
                 col={"sm": 12, "md": 6},
@@ -713,7 +713,7 @@ def github_body():
                 ft.Container(
                     content=ft.Image(src="history.png",
                                      border_radius=4, fit=ft.ImageFit.COVER),
-                    padding=ft.Padding(left=16, right=16, bottom=16),
+                    padding=ft.Padding(left=16, right=16, top=0, bottom=16),
                 ),
             ], spacing=0),
             bgcolor=ft.colors.with_opacity(0.10, TEXT_COLOR),
@@ -839,7 +839,7 @@ def demos_body():
                                 ft.Container(
                                     content=ft.Text("VIDEO RESOURCE", size=10, weight="bold", color=ACCENT_COLOR),
                                     bgcolor=ft.colors.with_opacity(0.1, ACCENT_COLOR),
-                                    padding=ft.Padding.symmetric(horizontal=10, vertical=4),
+                                    padding=ft.Padding(left=10, right=10, top=4, bottom=4),
                                     border_radius=20,
                                 ),
                                 ft.Text("Play MechTek Demo Video", color=TEXT_COLOR, size=20, weight="bold"),
@@ -857,7 +857,7 @@ def demos_body():
                                     style=ft.ButtonStyle(
                                         bgcolor=ACCENT_COLOR,
                                         shape=ft.RoundedRectangleBorder(radius=8),
-                                        padding=ft.Padding.symmetric(horizontal=20, vertical=12)
+                                        padding=ft.Padding(left=20, right=20, top=12, bottom=12)
                                     ),
                                     on_click=lambda e: subprocess.Popen(["start", "https://1drv.ms/v/c/c445a73c8b31892f/IQD7XacAqCNDSI9vZ1sl5si0AYtQNSvc3wn-wZN8RhLHtJ4?e=zRfw7D"], shell=True),
                                 ),
@@ -876,7 +876,7 @@ def demos_body():
                 ),
             ),
             ft.Container(
-                padding=ft.Padding.symmetric(vertical=10),
+                padding=ft.Padding(left=0, right=0, top=10, bottom=10),
                 content=ft.Divider(height=1, color=ft.colors.with_opacity(0.08, TEXT_COLOR))
             ),
             ft.Text("Confidence in Concepts: System Mathematics",
@@ -944,7 +944,7 @@ def blog_post_preview(title: str, body: str):
             ]
         ),
         padding=ft.Padding(left=0, right=0, top=16, bottom=24),
-        border=ft.Border(bottom=ft.BorderSide(1, DIVIDER_COLOR)),
+        border=ft.border.Border(bottom=ft.border.BorderSide(1, DIVIDER_COLOR)),
     )
 
 
@@ -959,7 +959,7 @@ def blog_post_preview(title: str, body: str):
             ]
         ),
         padding=ft.Padding(left=0, right=0, top=20, bottom=28),
-        border=ft.Border(bottom=ft.BorderSide(1, DIVIDER_COLOR)),
+        border=ft.border.Border(bottom=ft.border.BorderSide(1, DIVIDER_COLOR)),
         margin=ft.Margin(bottom=4, top=0, left=0, right=0),
     )
 
