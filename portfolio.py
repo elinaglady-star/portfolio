@@ -219,7 +219,7 @@ def math_module_card(title, description, top_formula,
             ft.Text(top_formula, size=14, color=ACCENT_COLOR,
                     weight=ft.FontWeight.BOLD),
             ft.Container(width=160, height=1, bgcolor=DIVIDER_COLOR,
-                         margin=ft.Margin(top=2, bottom=2)),
+                         margin=ft.Margin(top=2, bottom=2, left=0, right=0)),
             ft.Text(bottom_formula, size=14, color=ACCENT_COLOR,
                     weight=ft.FontWeight.BOLD),
         ]
@@ -264,7 +264,7 @@ def blog_post_preview(title, description):
             ft.TextButton("Read full post…",
                           style=ft.ButtonStyle(color=ACCENT_COLOR)),
         ], spacing=5),
-        margin=ft.Margin(bottom=20),
+        margin=ft.Margin(bottom=20, top=0, left=0, right=0),
         padding=15,
         border=ft.border.all(1, ft.colors.with_opacity(0.12, TEXT_COLOR)),
         border_radius=10,
@@ -575,7 +575,7 @@ def timeline_body():
                 "into cross-platform code modules.",
                 size=CONTENT_SIZE, color=SUBTLE_COLOR,
             ),
-            margin=ft.Margin(bottom=25, top=10),
+            margin=ft.Margin(bottom=25, top=10, left=0, right=0),
         ),
         
         *cards,
@@ -611,7 +611,7 @@ def github_body():
                 "track functional progress dynamically against academic criteria.",
                 size=CONTENT_SIZE, color=SUBTLE_COLOR,
             ),
-            margin=ft.Margin(bottom=20, top=10),
+            margin=ft.Margin(bottom=20, top=10, left=0, right=0),
         ),
         ft.Container(
             content=ft.Column([
@@ -633,7 +633,7 @@ def github_body():
             padding=20,
             bgcolor=ft.colors.with_opacity(0.10, TEXT_COLOR),
             border_radius=10,
-            margin=ft.Margin(bottom=20),
+            margin=ft.Margin(bottom=20, top=0, left=0, right=0),
         ),
         ft.Divider(height=10, thickness=1,
                    color=ft.colors.with_opacity(0.12, TEXT_COLOR)),
@@ -765,7 +765,7 @@ def matlab_body():
                 "Programming I module requirements for Semester 1, 2026.",
                 size=CONTENT_SIZE, color=SUBTLE_COLOR,
             ),
-            margin=ft.Margin(bottom=20, top=10),
+            margin=ft.Margin(bottom=20, top=10, left=0, right=0),
         ),
         ft.ResponsiveRow(
             controls=[
@@ -975,7 +975,7 @@ def blog_body():
                 "during the development of MechTek for the University of Namibia.",
                 size=CONTENT_SIZE, color=SUBTLE_COLOR,
             ),
-            margin=ft.Margin(bottom=30, top=10),
+            margin=ft.Margin(bottom=30, top=10, left=0, right=0),
         ),
 
         blog_post_preview(
