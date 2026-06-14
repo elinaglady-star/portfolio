@@ -213,8 +213,9 @@ def page_shell(page: ft.Page, active_key: str, body: ft.Control):
         expand=True,
         spacing=0,
     )
-    return ft.Stack(
-        controls=[build_background(), page_col],
+    return ft.Container(
+        content=page_col,
+        bgcolor=BG_COLOR,
         expand=True,
     )
 
@@ -1208,16 +1209,27 @@ def main(page: ft.Page):
         route = page.route or "/home"
 
         route_map = {
-            "/home":     ("home",     home_body()),
-            "/timeline": ("timeline", timeline_body()),
-            "/github":   ("github",   github_body()),
-            "/matlab":   ("matlab",   matlab_body()),
-            "/demos":    ("demos",    demos_body()),
-            "/blog":     ("blog",     blog_body()),
-            "/contact":  ("contact",  contact_body(page)),
+            "/home":     ("home",     home_body),
+            "/timeline": ("timeline", timeline_body),
+            "/github":   ("github",   github_body),
+            "/matlab":   ("matlab",   matlab_body),
+            "/demos":    ("demos",    demos_body),
+            "/blog":     ("blog",     blog_body),
+            "/contact":  ("contact",  lambda: contact_body(page)),
         }
 
-        key, body = route_map.get(route, route_map["/home"])
+        key, body_builder = route_map.get(route, route_map["/home"])
+        try:
+            body = body_builder()
+        except Exception as ex:
+            body = ft.Container(
+                padding=30,
+                content=ft.Column([
+                    ft.Text("Portfolio could not load this section.",
+                            size=24, weight=ft.FontWeight.BOLD, color=TEXT_COLOR),
+                    ft.Text(str(ex), size=14, color=ACCENT_COLOR),
+                ], spacing=12),
+            )
         page.add(page_shell(page, key, body))
         page.update()
 
