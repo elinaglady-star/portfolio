@@ -479,7 +479,7 @@ def home_body():
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,
                 horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-                width=float("inf"),
+                expand=True,
             ),
             ft.Container(height=20),
         ], 
@@ -600,7 +600,7 @@ def timeline_body():
             ],
             alignment=ft.MainAxisAlignment.CENTER,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-            width=float("inf"), # Forces the alignment container to span the full window width
+            expand=True, # Forces the alignment container to span the full window width
         ),
         ft.Container(height=20),
 
@@ -740,7 +740,7 @@ def github_body():
             ],
             alignment=ft.MainAxisAlignment.CENTER,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-            width=float("inf"), # Forces the alignment container to span the full window width
+            expand=True, # Forces the alignment container to span the full window width
         ),
         ft.Container(height=20),
 
@@ -808,7 +808,7 @@ def matlab_body():
             ],
             alignment=ft.MainAxisAlignment.CENTER,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-            width=float("inf"), # Forces the alignment container to span the full window width
+            expand=True, # Forces the alignment container to span the full window width
         ),
         ft.Container(height=20),
 
@@ -830,7 +830,7 @@ def demos_body():
                 spacing=4,
             ),
             ft.Container(
-                width=float("inf"),
+                expand=True,
                 height=260,
                 gradient=ft.LinearGradient(
                     begin=ft.Alignment(-1.0, -1.0),
@@ -868,7 +868,7 @@ def demos_body():
                                         shape=ft.RoundedRectangleBorder(radius=8),
                                         padding=ft.Padding(left=20, right=20, top=12, bottom=12)
                                     ),
-                                    on_click=lambda e: subprocess.Popen(["start", "https://1drv.ms/v/c/c445a73c8b31892f/IQD7XacAqCNDSI9vZ1sl5si0AYtQNSvc3wn-wZN8RhLHtJ4?e=zRfw7D"], shell=True),
+                                    url="https://1drv.ms/v/c/c445a73c8b31892f/IQD7XacAqCNDSI9vZ1sl5si0AYtQNSvc3wn-wZN8RhLHtJ4?e=zRfw7D",
                                 ),
                             ],
                             alignment=ft.MainAxisAlignment.CENTER,
@@ -933,7 +933,7 @@ def demos_body():
                 ],
                 alignment=ft.MainAxisAlignment.CENTER,
                 horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-                width=float("inf"), # Forces the alignment container to span the full window width
+                expand=True, # Forces the alignment container to span the full window width
             ),
             ft.Container(height=20),
 
@@ -1083,7 +1083,7 @@ def blog_body():
             ],
             alignment=ft.MainAxisAlignment.CENTER,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-            width=float("inf"),
+            expand=True,
         ),
         ft.Container(height=20),
     ])
@@ -1160,7 +1160,7 @@ def contact_body(page: ft.Page):
                                     "Send Message",
                                     style=ft.ButtonStyle(bgcolor=DIVIDER_COLOR,
                                                          color=BG_COLOR),
-                                    width=float("inf"),
+                                    expand=True,
                                     on_click=lambda _: page.launch_url(
                                         f"mailto:elinaglady@gmail.com"
                                         f"?subject=Message from {name_field.value}"
@@ -1186,7 +1186,7 @@ def contact_body(page: ft.Page):
             ],
             alignment=ft.MainAxisAlignment.CENTER,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-            width=float("inf"), # Forces the alignment container to span the full window width
+            expand=True, # Forces the alignment container to span the full window width
         ),
         ft.Container(height=20),
 
@@ -1225,4 +1225,10 @@ def main(page: ft.Page):
     page.go("/home")
 
 
-ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=int(os.environ.get("PORT", 8080)))
+ft.app(
+    target=main,
+    view=ft.AppView.WEB_BROWSER,
+    host="0.0.0.0",
+    port=int(os.environ.get("PORT", 8080)),
+    assets_dir="assets",
+)
